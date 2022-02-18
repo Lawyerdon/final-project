@@ -1,6 +1,8 @@
-<form action="script.php" method="post">
+@extends('app')
 
-    <?php include "title.php" ?>
+@section('registration')
+
+<form action="script.php" method="post">
 
     <div class="partRegBox">
         <label for="login">Логин:</label>
@@ -17,3 +19,5 @@
     </div>
 
 </form>
+
+@endsection
