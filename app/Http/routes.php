@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/user/user', function() {
+    return view('user.user');
+})->name('user.user');
 Route::delete('/image/{image}',function (){
     $image->delete();
     return redirect (route('images.index'));
