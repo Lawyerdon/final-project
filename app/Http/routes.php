@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::delete('/image/{image}',function (){
+    $image->delete();
+    return redirect (route('images.index'));
+})->name('images.delete');
+
+Route::get('/image/{image}/edit', function (){
+    return view('images.edit',[
+        'image'=>$image,
+    ]);
+})->name('images.edit');
