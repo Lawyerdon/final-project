@@ -40,6 +40,8 @@
             <div class="content">
                 <div class="title">Laravel 5</div>
             </div>
+                <a href="{{route('user.user')}}">go to user page</a>
         </div>
+    @yield('user')
     </body>
 </html>
