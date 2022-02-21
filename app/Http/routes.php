@@ -15,3 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group([
+    'middleware' => 'auth',
+//    'prefix' => 'tasks',
+], function() {
+    Route::resource('images', 'ImageController', ['except' => [
+        'show'
+    ]]);
+
+    Route::get('/home', 'HomeController@index');
+});
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
